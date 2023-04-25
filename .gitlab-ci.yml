@@ -1,0 +1,19 @@
+# Docker image on which this job will run
+image: python:latest
+
+c-regression-test:
+  script:
+    - bash c/build.bash
+    - ./c/fibonacci_test
+
+python-regression-test:
+  script:
+    - python3 python/fibonacci_test.py
+
+success-shell:
+  script:
+    - ./shell/success.sh
+
+fail-shell:
+  script:
+    - ./shell/fail.sh
