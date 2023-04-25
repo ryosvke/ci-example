@@ -1,6 +1,6 @@
 unsigned int fibonacci(unsigned int n) {
     unsigned int a = 0;
-    unsigned int b = 2;  // FIXME! correct value is 1
+    unsigned int b = 1;  // FIXME! correct value is 1
 
     switch (n) {
         case 0:
