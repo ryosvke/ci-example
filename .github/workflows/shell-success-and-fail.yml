@@ -1,0 +1,29 @@
+# Name of this workflow
+name: Success and Fail workflow
+
+# Trigger Event
+# ref: https://docs.github.com/ja/actions/using-workflows/events-that-trigger-workflows
+on: [push, workflow_dispatch]
+
+jobs:
+    success-shell:
+      # Platform on which this workflow will run
+      # ref: https://docs.github.com/ja/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idruns-on
+      runs-on: ubuntu-latest
+      steps:
+        - name: Check out this repository
+          uses: actions/checkout@v3
+
+        - name: Success
+          run: ./shell/success.sh
+
+    fail-shell:
+      # Platform on which this workflow will run
+      # ref: https://docs.github.com/ja/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idruns-on
+      runs-on: ubuntu-latest
+      steps:
+        - name: Check out this repository
+          uses: actions/checkout@v3
+
+        - name: Fail
+          run: ./shell/fail.sh
