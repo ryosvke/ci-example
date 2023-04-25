@@ -3,7 +3,7 @@ import sys
 
 def fibonacci(n):
     a = 0
-    b = 2  # FIXME! correct value is 1
+    b = 1  # FIXME! correct value is 1
 
     if n == 0 or n == 1:
         return a
